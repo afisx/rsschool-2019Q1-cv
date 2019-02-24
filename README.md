@@ -1,1 +1,1 @@
-"https://afisx.giyhub.io/rsschool-2019Q1-cv/cv.md" 
+"https://afisx.github.io/rsschool-2019Q1-cv/cv.md" 

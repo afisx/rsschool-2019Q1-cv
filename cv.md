@@ -27,6 +27,8 @@
 
 #### Projects:
  * My firs project was online store which used PHP and build on it [Yii2 framework](https://www.yiiframework.com/). This framework is built on the classic based MVC, and use ***OOP***.
+
+
 **Controller example:** ```public function actionIndex()
 	{
         $homeContent = Page::find()->where(array('alias' => 'home'))->one();
@@ -40,6 +42,8 @@
         $this->fillSeoParams($model);
 		return $this->render('index', array('model' => $model));
 	}```
+
+
 **ViewModel example:** ```class HomeModel extends Model {
     private $content;
     private $images;
@@ -112,16 +116,24 @@
         $this->images = $images;
     }
 }```
-**and View example:** ```$this->title = 'About';
-$this->params['breadcrumbs'][] = $this->title;```
+
+
+**and View example:** ```$this->title = 'About'; $this->params['breadcrumbs'][] = $this->title;```
  <div class="site-about">
-	<h1> ``` <?php echo Html::encode($this->title); ?> ``` </h1>
+	<h1>
+	```<?php echo Html::encode($this->title); ?>```
+	</h1>
 	<p>This is the About page. You may modify the following file to customize its content:</p>
-	<code> ```<?php echo __FILE__; ?>``` </code>
+	<code>
+	```<?php echo __FILE__; ?>```
+	</code>
 </div>
+
+
 * Now I learn NodeJs and build on it ***[Express Js](http://expressjs.com/)*** famework, and create on its base CMS system for me. I use NoSqL database ***[MongoDB](https://www.mongodb.com/)***, and Promise consept in this project.
 This project is created on IDE ***[Cloud 9](https://c9.io)***
 **Below are examples:**
+
 **Controller example:** ```router.get('/user/signOut', (req, res, next) => {
 	if (!req.session.user){
 		res.redirect('/login');
@@ -130,6 +142,8 @@ This project is created on IDE ***[Cloud 9](https://c9.io)***
 		res.json({url: '/login', message: 'Сейчас будет произведено перенаправление на страницу входа.'});
 	}
 });```
+
+
 **View model example:** ```module.exports = function(userDatabase, userID){
 	const UserModel = userModel(userDatabase);
 	let list = {};
@@ -146,6 +160,7 @@ This project is created on IDE ***[Cloud 9](https://c9.io)***
 		});
 	});
 };```
+
 
 **View example used EJS template:** ```<% for(var i = 0; i<contentBlocks.length; i++){%>
 	<% if (contentBlocks[i].type === 'img'){ %>
@@ -184,4 +199,4 @@ This project is created on IDE ***[Cloud 9](https://c9.io)***
 > I didn't use spoken English after graduation. I used English to ask questions in the discussion forums.
 
 ***
- created with [Dillinger](https://dillinger.io/)
+ created with [Dillinger](https://dillinger.io/) 

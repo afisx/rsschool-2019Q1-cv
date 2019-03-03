@@ -1,5 +1,5 @@
 ***
-[![My photo](https://github.com/afisx/rsschool-2019Q1-cv/assets/images/photo.webp)](https://github.com/afisx)
+[![My photo](https://pp.userapi.com/c850616/v850616672/3e093/PLwvmXNhQPY.jpg?ava=1)](https://github.com/afisx)
 # Aliaksei Maiseyenka
 ***
 ## Contacts:

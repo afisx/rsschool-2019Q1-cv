@@ -156,7 +156,7 @@ This project is created on IDE ***[Cloud 9](https://c9.io)***
 };```
 
 
-**View example used EJS template:** ```<% for(var i = 0; i<contentBlocks.length; i++){%>
+**View example used EJS template:** ```<% for(var i = 0; i<contentBlocks.length; i++){ %>
 	<% if (contentBlocks[i].type === 'img'){ %>
 		<<%- contentBlocks[i].type %> class="<%- contentBlocks[i].gridClass %> img-fluid" data-id="<%- contentBlocks[i].id %>" data-type="<%- contentBlocks[i].category %>" data-pos="<%- contentBlocks[i].position %>" data-name="<%- contentBlocks[i].name %>" src="/<%- user.name+contentBlocks[i].content %>">
 		</<%- contentBlocks[i].type %>>

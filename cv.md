@@ -115,9 +115,9 @@
 **and View example:** ```$this->title = 'About';
 $this->params['breadcrumbs'][] = $this->title;```
  <div class="site-about">
-	<h1>```<?php echo Html::encode($this->title); ?>```</h1>
+	<h1> ``` <?php echo Html::encode($this->title); ?> ``` </h1>
 	<p>This is the About page. You may modify the following file to customize its content:</p>
-	<code>```<?php echo __FILE__; ?>```</code>
+	<code> ```<?php echo __FILE__; ?>``` </code>
 </div>
 * Now I learn NodeJs and build on it ***[Express Js](http://expressjs.com/)*** famework, and create on its base CMS system for me. I use NoSqL database ***[MongoDB](https://www.mongodb.com/)***, and Promise consept in this project.
 This project is created on IDE ***[Cloud 9](https://c9.io)***

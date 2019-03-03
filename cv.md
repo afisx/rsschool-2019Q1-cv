@@ -27,11 +27,7 @@
 
 #### Projects:
  * My firs project was online store which used PHP and build on it [Yii2 framework](https://www.yiiframework.com/). This framework is built on the classic based MVC, and use ***OOP***.
-**Controller example:** ``` 
-    /**
-     ** @return string
-     */
-    public function actionIndex()
+**Controller example:** ```public function actionIndex()
 	{
         $homeContent = Page::find()->where(array('alias' => 'home'))->one();
         $model = $this->fillPageModel($homeContent);
@@ -41,14 +37,10 @@
 		$rootCategories = $this->getRootCategories();
         $list = $this->mapCategories($rootCategories, true);
 		$model->setCategories($list);
-        /**
-         * @var $homeContent Page
-         */
         $this->fillSeoParams($model);
 		return $this->render('index', array('model' => $model));
-	} ```
-**ViewModel example:** ```
-class HomeModel extends Model {
+	}```
+**ViewModel example:** ```class HomeModel extends Model {
     private $content;
     private $images;
     private $carouselHeight;
@@ -62,101 +54,59 @@ class HomeModel extends Model {
 	public function getCategories() {	
 	    return $this->categories;
 	}
-    /**
-     ** @param mixed $metaDescription
-     */
     public function setMetaDescription($metaDescription)
     {
         $this->metaDescription = $metaDescription;
     }
-    /**
-     ** @return mixed
-     */
     public function getMetaDescription()
     {
         return $this->metaDescription;
     }
-    /**
-     ** @param mixed $metaKeywords
-     */
     public function setMetaKeywords($metaKeywords)
     {
         $this->metaKeywords = $metaKeywords;
     }
-    /**
-     ** @return mixed
-     */
     public function getMetaKeywords()
     {
         return $this->metaKeywords;
     }
-    /**
-     ** @param mixed $title
-     */
     public function setTitle($title)
     {
         $this->title = $title;
     }
-    /**
-     ** @return mixed
-     */
     public function getTitle()
     {
         return $this->title;
     }
-    /**
-     ** @param mixed $carouselDelay
-     */
     public function setCarouselDelay($carouselDelay)
     {
         $this->carouselDelay = $carouselDelay;
     }
-    /**
-     ** @return mixed
-     */
     public function getCarouselDelay()
     {
         return $this->carouselDelay;
     }
-    /**
-     ** @param mixed $carouselHeight
-     */
     public function setCarouselHeight($carouselHeight)
     {
         $this->carouselHeight = $carouselHeight;
     }
-    /**
-     ** @return mixed
-     */
     public function getCarouselHeight()
     {
         return $this->carouselHeight;
     }
     private $carouselDelay;
-    /**
-     ** @param string $content
-     */
     public function setContent($content)
     {
         $this->content = $content;
     }
-    /**
-     ** @return string
-     */
     public function getContent()
     {
         return $this->content;
     }
-    /**
-     ** @return mixed
-     */
     public function getImages()
     {
         return $this->images;
     }
-    /**
-     ** @param mixed $images
-     */
     public function setImages($images)
     {
         $this->images = $images;

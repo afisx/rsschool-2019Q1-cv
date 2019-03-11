@@ -35,42 +35,206 @@
 			<section id="about" class="about-container">
 				<h2>ABOUT</h2>
 				<article class="about-inner">
-					<h3>About me_</h3>
+					<h3>About me__</h3>
 					<p id="blog">Although my main specialty has always been architecture, almost immediately after graduation from Belarusian national Polytechnic Univercity i began to study programming and markup languages. This first became my hobby, and then my second profession. I was always ready for self-education. I hope that it will help me to become an excellent specialist in IT.</p>
 				</article>
 				<article class="about-inner">
-					<h3>Skills_</h3>
+					<h3>Skills__</h3>
 					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
+						<li><strong>Programming languages:</strong><em> C (few), C++ (few), PHP, JavaScript, SQL</em></li>
+						<li><strong>Markup languages:</strong><em> HTML, CSS, LESS, Markdown</em></li>
+						<li><strong>Frameworks:</strong><em><a href="https://www.yiiframework.com/"> Yii2 framework</a>, Wordpress, <a href="http://expressjs.com/">ExpressJs</a></em></li>
+						<li><strong>Database:</strong><em> MySQL (SQL), <a href="https://www.mongodb.com/">MongoDB</a> (NoSQL)</em></li>
+						<li><strong>IDE:</strong><em> VisualStudio, PHP Storm, Web Storm, <a href="http://c9.io">Cloud 9</a></em></li>
+						<li><strong>Technologies:</strong><em> jQuery(JavaScript Library), Ajax, Socket.io, NodeJs</em></li>
+					</ul>
+				</article>
+				<article class="about-inner">
+					<h3>Education__</h3>
+					<ul>
+					  <li><strong>Base education:</strong> <em>School № 163 of Minsk</em> <strong><em>(1999)</em></strong></li>
+					  <li><strong>Secondary education:</strong> <em>Lyceum at the Belarusian state Polytechnic Academy (now Belarusian national Polytechnic University)</em> <strong><em>(2001)</em></strong></li>
+					  <li><strong>Higher education:</strong> <em>Belarusian national Polytechnic University</em> <strong><em>(2007)</em></strong></li>
+					  <li><strong>Self-education:</strong>
+						<ul>
+						  <li><em>Google, different forums like the</em> <strong><em><a href="https://stackoverflow.com/">Stack Overflow</a></em></strong>, <strong><em><a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a></em></strong></li>
+						  <li><em>Computer Science Center</em> <strong><em><a href="https://www.lektorium.tv/university/2932">Lektorium</a></em></strong></li>
+						  <li><em>Different books on the subject</em></li>
+						  <li><em><a href="https://www.codecademy.com/">Codeacademy</a> HTML and CSS basic courses</em></li>
+						  <li><em><a href="https://htmlacademy.ru/">Htmlacademy</a> HTML and CSS basic courses</em></li>
+						</ul>
+					  </li>
+					</ul>
+					<h5 id="english-level">English level:<a class="anchorjs-link " href="https://afisx.github.io/rsschool-2019Q1-cv/cv#english-level" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h5>
+					<ul>
+					  <li><strong>A1</strong> (basic)</li>
+					  <li><strong>A2</strong> (pre-intermediate)</li>
 					</ul>
 				</article>
 			</section>
 			<section id="portfolio" class="portfolio-container">
-				<div class="portfolio-container-row">
-					<div class="portfolio-item">
+				<h2>PORTFOLIO</h2>
+				<article class="about-inner">
+					<h3>Projects__</h3>
+					<ul>
+					  <li>My firs project was online store which used PHP and build on it <a href="https://www.yiiframework.com/">Yii2 framework</a>. This framework is built on the classic based MVC, and use <strong><em>OOP</em></strong>.</li>
+					</ul>
+					<p><strong>Controller example:</strong> <code class="highlighter-rouge">public function actionIndex()
+						{
+							$homeContent = Page::find()-&gt;where(array('alias' =&gt; 'home'))-&gt;one();
+							$model = $this-&gt;fillPageModel($homeContent);
+							$model-&gt;setCarouselHeight($this-&gt;getSettings('CarouselHeight'));
+							$model-&gt;setCarouselDelay($this-&gt;getSettings('CarouselDelay'));
+							$model-&gt;setImages(Gallery::find()-&gt;all());
+							$rootCategories = $this-&gt;getRootCategories();
+							$list = $this-&gt;mapCategories($rootCategories, true);
+							$model-&gt;setCategories($list);
+							$this-&gt;fillSeoParams($model);
+							return $this-&gt;render('index', array('model' =&gt; $model));
+						}</code></p>
+
+					<p><strong>ViewModel example:</strong> <code class="highlighter-rouge">class HomeModel extends Model {
+						private $content;
+						private $images;
+						private $carouselHeight;
+						private $title;
+						private $metaKeywords;
+						private $metaDescription;
+						private $categories;		
+						public function setCategories($categories) {		
+							$this-&gt;categories = $categories;	
+						}		
+						public function getCategories() {	
+							return $this-&gt;categories;
+						}
+						public function setMetaDescription($metaDescription)
+						{
+							$this-&gt;metaDescription = $metaDescription;
+						}
+						public function getMetaDescription()
+						{
+							return $this-&gt;metaDescription;
+						}
+						public function setMetaKeywords($metaKeywords)
+						{
+							$this-&gt;metaKeywords = $metaKeywords;
+						}
+						public function getMetaKeywords()
+						{
+							return $this-&gt;metaKeywords;
+						}
+						public function setTitle($title)
+						{
+							$this-&gt;title = $title;
+						}
+						public function getTitle()
+						{
+							return $this-&gt;title;
+						}
+						public function setCarouselDelay($carouselDelay)
+						{
+							$this-&gt;carouselDelay = $carouselDelay;
+						}
+						public function getCarouselDelay()
+						{
+							return $this-&gt;carouselDelay;
+						}
+						public function setCarouselHeight($carouselHeight)
+						{
+							$this-&gt;carouselHeight = $carouselHeight;
+						}
+						public function getCarouselHeight()
+						{
+							return $this-&gt;carouselHeight;
+						}
+						private $carouselDelay;
+						public function setContent($content)
+						{
+							$this-&gt;content = $content;
+						}
+						public function getContent()
+						{
+							return $this-&gt;content;
+						}
+						public function getImages()
+						{
+							return $this-&gt;images;
+						}
+						public function setImages($images)
+						{
+							$this-&gt;images = $images;
+						}
+					}</code></p>
+
+					<p><strong>and View example:</strong> <code class="highlighter-rouge">$this-&gt;title = 'About'; $this-&gt;params['breadcrumbs'][] = $this-&gt;title;</code></p>
+					<div class="site-about">
+						<p>This is the About page. You may modify the following file to customize its content:</p>
 					</div>
-				</div>
-				<div class="portfolio-container-row">
-				</div>
-				<div class="portfolio-container-row">
-				</div>
+					<ul>
+					  <li>Now I learn NodeJs and build on it <strong><em><a href="http://expressjs.com/">Express Js</a></em></strong> famework, and create on its base CMS system for me. I use NoSqL database <strong><em><a href="https://www.mongodb.com/">MongoDB</a></em></strong>, and Promise consept in this project.
+					This project is created on IDE <strong><em><a href="https://c9.io/">Cloud 9</a></em></strong>
+					<strong>Below are examples:</strong></li>
+					</ul>
+
+					<p><strong>Controller example:</strong> <code class="highlighter-rouge">router.get('/user/signOut', (req, res, next) =&gt; {
+						if (!req.session.user){
+							res.redirect('/login');
+						} else {
+							req.session.destroy();
+							res.json({url: '/login', message: 'Сейчас будет произведено перенаправление на страницу входа.'});
+						}
+					});</code></p>
+
+					<p><strong>View model example:</strong> <code class="highlighter-rouge">module.exports = function(userDatabase, userID){
+						const UserModel = userModel(userDatabase);
+						let list = {};
+						return new Promise((resolve, reject) =&gt; {
+							UserModel.findByUserId(userID, function(user){
+								list.id = user._id;
+								list.name = user.userName;
+								list.userMail = user.eMail;
+								list.registred = user.createdAt;
+								list.config = user.config;
+								resolve(list);
+							}, function(err){
+								reject(err);
+							});
+						});
+					};</code></p>
+
+					<p><strong>View example used EJS template:</strong> <code class="highlighter-rouge">&lt;% for(var i = 0; i&lt;contentBlocks.length; i++){ %&gt;
+						&lt;% if (contentBlocks[i].type === 'img'){ %&gt;
+							&lt;&lt;%- contentBlocks[i].type %&gt; class="&lt;%- contentBlocks[i].gridClass %&gt; img-fluid" data-id="&lt;%- contentBlocks[i].id %&gt;" data-type="&lt;%- contentBlocks[i].category %&gt;" data-pos="&lt;%- contentBlocks[i].position %&gt;" data-name="&lt;%- contentBlocks[i].name %&gt;" src="/&lt;%- user.name+contentBlocks[i].content %&gt;"&gt;
+							&lt;/&lt;%- contentBlocks[i].type %&gt;&gt;
+						&lt;% }else{ %&gt;
+							&lt;&lt;%- contentBlocks[i].type %&gt; class="&lt;%- contentBlocks[i].gridClass %&gt;" data-id="&lt;%- contentBlocks[i].id %&gt;" data-type="&lt;%- contentBlocks[i].category %&gt;" data-pos="&lt;%- contentBlocks[i].position %&gt;" data-name="&lt;%- contentBlocks[i].name %&gt;"&gt;
+							&lt;% if (contentBlocks[i].children.length &amp;&amp; contentBlocks[i].children.length &gt; 0) { %&gt;
+								&lt;%- include('./items', {contentBlocks: contentBlocks[i].children}) %&gt;
+							&lt;% } else if (contentBlocks[i].content !== '') { %&gt;
+								&lt;%- contentBlocks[i].content %&gt;
+							&lt;% } else { %&gt;
+								Empty block &lt;%- contentBlocks[i].type %&gt;
+							&lt;% } %&gt;
+							&lt;/&lt;%- contentBlocks[i].type %&gt;&gt;
+						&lt;% } %&gt;
+					&lt;% } %&gt;</code></p>
+				</article>
 			</section>
 			<div class="main-sublayer"></div>
 		</main>
 		<footer>
-			<div class="about-social-networks">
-				<ul>
-					<li><a class="social-link" href="https://facebook.com"><img class="social-logo" src="/assets/images/Facebook.png"></a></li>
-				</ul>
-			</div>
 			<section id="copyright" class="copyright-container">
 				<article class="copyright-inner">
 					<p>© Copyright 2019 by Aliaksei Maiseyenka</p>
+					<div class="about-social-networks">
+						<ul>
+						  <li><strong>mobile:</strong> <em>+375 (29) 703-32-89</em></li>
+						  <li><strong>email:</strong> <em>alexej.moiseenko@gmail.com</em></li>
+						  <li><strong>skype:</strong> <em>afisx@outlook.com</em></li>
+						  <li><strong>vk:</strong> <em><a href="https://vk.com/sorok2">Sorok2</a></em></li>
+						  <li><strong>facebook:</strong> <em><a href="https://www.facebook.com/Afisx">Afisx</a></em></li>
+						</ul>
+					</div>
 				</article>
 			</section>
 		</footer>

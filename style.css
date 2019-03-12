@@ -14,6 +14,7 @@ header {
 	align-items: center;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	background-color: #f0f0f0;
 }
 main {
 	margin-top: -50px;
@@ -39,7 +40,8 @@ h2 {
 	font-size: 2.4em;
 	font-weight: normal;
 	padding-top: 5px;
-	padding-left: 4px;
+	padding-left: 5px;
+	padding-right: 5px;
 	line-height: 1.0em;
 	border-left: 2px solid #323232;
 }
@@ -133,7 +135,7 @@ ul {
 	color: #2eb398;
 }
 .main-sublayer {
-	background-color: #fff;
+	background-color: #f0f0f0;
 	width: 280px;
 	height: 280px;
 	margin-left: -140px;
@@ -144,7 +146,53 @@ ul {
 }
 .portfolio-container {
 	position: relative;
-	padding-bottom: 23px;
+	background-color: #f0f0f0;
+	padding: 80px 50px;
+	color: #323232;
+}
+.portfolio-container h2 {
+	margin-bottom: 30px;
+	padding-bottom: 15px;
+	color: #323232;
+	text-align: right;
+	border-bottom: dotted 1px #323232;
+	border-left: none;
+}
+.portfolio-container h3 {
+	padding-bottom: 10px;
+	color: #323232;
+}
+.portfolio-container p {
+	padding: 15px;
+	font-size: 1.0em;
+}
+.project-description {
+	padding-left: 0;
+}
+.project-description span {
+	font-size: 1.2em;
+	padding-left: 0;
+}
+.portfolio-container {
+
+}
+.example-code-container {
+	background-color: #fff;
+	border-radius: 15px;
+	padding: 15px;
+	margin: 15px;
+}
+.example-code {
+	color: #787878;
+	white-space: pre-line;
+}
+.portfolio-container a {
+	color: #000;
+	border-bottom: 1px dotted #323232;
+}
+.portfolio-container a:hover {
+	color: #000;
+	border-bottom: 1px solid #323232;
 }
 .portfolio-container-row {
 	position: relative;
@@ -169,20 +217,28 @@ ul {
 }
 .about-container {
 	position: relative;
-	background-color: #a5a5a5;
+	background-color: #323232;
 	padding: 80px 50px;
-	color: #323232;
+	color: #f0f0f0;
 }
 .about-container h2 {
 	margin-bottom: 30px;
+	padding-bottom: 15px;
+	color: #f0f0f0;
+	text-align: right;
+	border-bottom: dotted 1px #fff;
 }
 .about-container h3 {
 	padding-bottom: 10px;
-	color: #323232;
+	color: #f0f0f0;
 }
 .about-container a {
-	padding-bottom: 10px;
 	color: #fff;
+	border-bottom: 1px dotted #fff;
+}
+.about-container a:hover {
+	color: #fff;
+	border-bottom: 1px solid #fff;
 }
 .about-inner {
 	padding-top: 20px;
@@ -198,13 +254,27 @@ ul {
 	padding-left: 15px;
 	padding-bottom: 5px;
 }
-.copyright-inner {
+.contacts-copyright-inner {
 	background-color: #323232;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 25px;
+	padding-bottom: 50px;
+	color: #f0f0f0;
 }
-.copyright-inner > p{
+.contacts-copyright-inner > p{
 	color: #454545;
 	font-size: 0.7em;
-	font-family: 'MavenProRegular', serif;
 	padding: 15px;
 	padding-left: 40px;
+}
+.copyright {
+	width: 30%;
+}
+.contacts {
+	
+}
+.social-networks {
+	width: 30%;
 }

@@ -166,15 +166,8 @@ ul {
 	padding: 15px;
 	font-size: 1.0em;
 }
-.project-description {
-	padding-left: 0;
-}
 .project-description span {
 	font-size: 1.2em;
-	padding-left: 0;
-}
-.portfolio-container {
-
 }
 .example-code-container {
 	background-color: #fff;
@@ -182,9 +175,14 @@ ul {
 	padding: 15px;
 	margin: 15px;
 }
+.example-container {
+	text-align: center;
+}
 .example-code {
 	color: #787878;
 	white-space: pre-line;
+	text-align: left;
+	display: block;
 }
 .portfolio-container a {
 	color: #000;
@@ -269,12 +267,28 @@ ul {
 	padding: 15px;
 	padding-left: 40px;
 }
-.copyright {
+.contacts {
 	width: 30%;
 }
-.contacts {
-	
+.contacts a {
+	padding-top: 10px;
+	color: #fff;
+	border-bottom: 1px dotted #fff;
+}
+.contacts a:hover {
+	color: #fff;
+	border-bottom: 1px solid #fff;
 }
 .social-networks {
 	width: 30%;
+	text-align: right;
+}
+.social-networks a {
+	padding-top: 10px;
+	color: #fff;
+	border-bottom: 1px dotted #fff;
+}
+.social-networks a:hover {
+	color: #fff;
+	border-bottom: 1px solid #fff;
 }
